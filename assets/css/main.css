@@ -230,19 +230,18 @@ a{
   background: #2E2E2E;
   color: #fff;
   font-family: monospace;
-  padding-top: 300px;
+  padding-top: 80px;
   display: flex;
   justify-content: center;
 }
 
 /* DEMO-SPECIFIC STYLES */
 .slider h1 {
-  top: 50%;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 4px solid orange; /* The typwriter cursor */
+  border-right: .15em solid orange; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .5px; /* Adjust as needed */
+  margin: 150px auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
   animation: 
     typing 3.5s steps(40, end),
     blink-caret .75s step-end infinite;
@@ -272,7 +271,7 @@ a{
 /*Estilos del section*/
 
 .caja-general h2{
-  color: #2E2E2E;
+  color: #2E2E2E
 }
 
 .caja-general h2{
