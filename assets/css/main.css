@@ -5,6 +5,7 @@
   text-align: center;
 }
 
+/*Estilos del header */
 nav{
   top: 0;
   left: 0;
@@ -48,11 +49,15 @@ nav .nav-background {
 
 }
 
+#caja-contenedor{
+  /*line-height: 0px;*/
+}
+
 .caja-general li{
   background-color: #F7B617;
   list-style: none;
   display: inline-block;;
-  margin: -4px -3px;
+  margin: -4px 0px;
 }
 
 .contenedor{
@@ -86,11 +91,11 @@ nav .nav-background {
   left: 82px;
   z-index: 0;
   font-weight: bolder;
-  font-size: 20px;
+  font-size: 30px;
   text-align: center;
 }
 
-span:hover {
+.nombre-cover:hover {
   display: none;
   color: white;
   text-align: center;

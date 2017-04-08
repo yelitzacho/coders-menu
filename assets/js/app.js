@@ -1,9 +1,11 @@
 window.addEventListener('load', function(evento){
   event.preventDefault();
 
+  //Llamaa al section
   var cajaContenedor = document.getElementById('caja-contenedor');
 
-  var coders = ['','Fiorella Quispe','Lourdes vilchez','Leydi Madonado','Yessica ',
+  //Array de las coders
+  var coders = ['','Fiorella Quispe','Lourdes vilchez','Leydi Madonado','Yessica Huaman',
                     'Miriam Mendoza', 'Elizabeth Condori', 'Arantza Burga', 'Grecia Rayme',
                     'Janine Vega', 'Rosario Félix', 'Daguiana Revolledo', 'Jenny Velasquez',
                     'Nadia Cuadros','Michelle More', 'Marilu Llamoca', 'Mariel García',
@@ -18,21 +20,27 @@ window.addEventListener('load', function(evento){
                     'Maria Grecia Cutipa', 'Ana Durand', 'Glisse Jorge', 'Neiza Nuñez',
                     'Sandra Solorzano'];
 
-
-  var ul = document.createElement('ul');
-  var li= document.createElement('li');
-  var div = document.createElement('div');
-  var figure = document.createElement('figure');
-  var imagen = document.createElement('img');
-  var figcaption = document.createElement('figcaption');
-  var span = document.createElement('span');
-
-  for (var i = 0; i < 55; i++) {
+  //Iterará todas las coders y creará las etiquetas
+  for (var i = 1; i < 55; i++) {
     var urlImg = 'assets/img/'+i+'.png';
+    var li= document.createElement('li');
+    var div = document.createElement('div');
+    var figure = document.createElement('figure');
+    var imagen = document.createElement('img');
+    var figcaption = document.createElement('figcaption');
+    var span = document.createElement('span');
+
+    //Creará el atributo src - url de las imágenes
     imagen.setAttribute('src', urlImg);
+    imagen.setAttribute('class', 'coders');
 
     figure.appendChild(imagen);
     figure.setAttribute ('class','contenedor');
+
+    span.innerText= coders[i];
+    span.setAttribute('class','nombre-coder');
+    figcaption.appendChild(span);
+    figure.appendChild(figcaption);
 
     div.appendChild(figure);
     div.setAttribute('class','box');
@@ -40,19 +48,6 @@ window.addEventListener('load', function(evento){
     li.appendChild(div);
     li.setAttribute('class','grid');
 
+    cajaContenedor.appendChild(li);
   }
-  cajaContenedor.appendChild(li);
 })
-
-/*
-<li class="grid">
-  <div class="box">
-    <figure class="contenedor">
-      <img src="assets/img/2.png" class="coders" alt="nombre">
-      <figcaption>
-        <span>Nombre Coder 2</span>
-      </figcaption>
-    </figure>
-  </div>
-</li>
-*/
